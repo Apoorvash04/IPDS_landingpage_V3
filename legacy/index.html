@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IP & Data Solutions | Secure. Connected. Protected.</title>
+<meta name="description" content="IP & Data Solutions (IPDS), Jodhpur: server & storage, backup and disaster recovery, structured cabling, wireless, IP telephony and professional IT services.">
+<meta name="theme-color" content="#07070B">
+<link rel="icon" type="image/png" href="logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07070B;
+  --bg-2:#0C0C12;
+  --card:#0E0E15;
+  --line:rgba(255,255,255,.08);
+  --line-2:rgba(255,255,255,.14);
+  --text:#ECECF1;
+  --muted:#8A8A9B;
+  --brand:#E3164D;
+  --brand-2:#FF3D6E;
+  --coral:#FF6A4A;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --max:1360px;
+  --pad:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{font-family:"Inter Tight",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;overflow-x:clip;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body.is-loading{overflow:hidden}
+::selection{background:var(--brand);color:#fff}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--brand);outline-offset:4px;border-radius:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.label{display:inline-flex;align-items:center;gap:12px;font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.label b{color:var(--brand);font-weight:500}
+.h2{font-size:clamp(38px,6vw,92px);line-height:.98;letter-spacing:-.045em;font-weight:700;color:#fff}
+.h2 em{font-style:normal;color:var(--brand)}
+.sec{position:relative;padding:clamp(100px,14vw,200px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:clamp(48px,6vw,88px)}
+.sec-head p{max-width:420px;color:var(--muted);font-size:17px}
+
+/* split helpers */
+.wm{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.wi{display:inline-block}
+
+/* Grain */
+.grain{position:fixed;inset:-50%;z-index:900;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+
+/* Preloader */
+.pre{position:fixed;inset:0;z-index:1000;pointer-events:none}
+.pre-panel{position:absolute;inset:0;background:#050508}
+.pre-panel.p2{background:var(--brand)}
+.pre-inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:var(--pad)}
+.pre-top{display:flex;justify-content:space-between;font:500 12px "JetBrains Mono",monospace;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+.pre-logo{position:absolute;top:50%;left:50%;width:64px;margin:-34px 0 0 -32px}
+.pre-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.pre-line{flex:1;height:1px;background:var(--line-2);position:relative;margin-bottom:22px}
+.pre-line i{position:absolute;inset:0;background:var(--brand);transform-origin:left;transform:scaleX(0)}
+.pre-num{font-size:clamp(72px,14vw,200px);font-weight:700;letter-spacing:-.06em;line-height:.8;color:#fff;font-variant-numeric:tabular-nums}
+.static .pre{display:none}
+
+/* Cursor */
+.cur,.cur-dot{position:fixed;top:0;left:0;z-index:950;pointer-events:none;border-radius:50%;opacity:0}
+.cur{width:40px;height:40px;margin:-20px 0 0 -20px;border:1px solid rgba(255,255,255,.35);transition:width .45s var(--ease),height .45s var(--ease),margin .45s var(--ease),background .3s,border-color .3s}
+.cur-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--brand)}
+.cur.hover{width:76px;height:76px;margin:-38px 0 0 -38px;background:rgba(227,22,77,.12);border-color:rgba(227,22,77,.6)}
+
+/* Nav */
+.nav{position:fixed;top:18px;left:0;right:0;z-index:500;transition:transform .7s var(--ease)}
+.nav.hide{transform:translateY(-140%)}
+.nav-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.02em;font-size:17px;color:#fff}
+.logo img{width:30px;height:auto;transition:transform .8s var(--ease)}
+.logo:hover img{transform:rotate(-12deg) scale(1.08)}
+.nav-pill{display:flex;align-items:center;gap:2px;padding:6px;border-radius:999px;background:rgba(14,14,21,.55);border:1px solid var(--line);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%)}
+.nav-pill a{position:relative;padding:9px 16px;border-radius:999px;font-size:14px;font-weight:500;color:#B9B9C6;transition:color .3s,background .3s}
+.nav-pill a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.nav-pill a.active{color:#fff}
+.nav-pill a.active::before{content:"";position:absolute;left:50%;bottom:3px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--brand)}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;height:52px;padding:0 26px;border-radius:999px;font-weight:600;font-size:15px;letter-spacing:-.01em;overflow:hidden;isolation:isolate;white-space:nowrap}
+.btn .t{position:relative;display:inline-block;overflow:hidden;height:1.3em;line-height:1.3em}
+.btn .t span{display:block;transition:transform .6s var(--ease)}
+.btn .t span+span{position:absolute;top:100%;left:0}
+.btn:hover .t span{transform:translateY(-100%)}
+.btn .arr{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;transition:transform .6s var(--ease)}
+.btn .arr svg{width:13px;height:13px}
+.btn:hover .arr{transform:rotate(-45deg)}
+.btn-brand{background:var(--brand);color:#fff;box-shadow:0 0 0 0 rgba(227,22,77,.5),0 20px 50px -15px rgba(227,22,77,.7)}
+.btn-brand .arr{background:#fff;color:var(--brand)}
+.btn-brand::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--brand),var(--coral));opacity:0;transition:opacity .5s}
+.btn-brand:hover::before{opacity:1}
+.btn-line{border:1px solid var(--line-2);color:#fff;background:rgba(255,255,255,.02);backdrop-filter:blur(10px)}
+.btn-line:hover{border-color:rgba(255,255,255,.4)}
+.btn-line .arr{background:rgba(255,255,255,.08)}
+.nav .btn{height:46px;padding:0 8px 0 20px}
+.burger{display:none;width:48px;height:48px;border-radius:50%;background:rgba(14,14,21,.6);border:1px solid var(--line);backdrop-filter:blur(14px);position:relative}
+.burger i{position:absolute;left:15px;right:15px;height:1.5px;background:#fff;transition:transform .5s var(--ease)}
+.burger i:nth-child(1){top:19px}.burger i:nth-child(2){top:27px}
+.menu-open .burger i:nth-child(1){transform:translateY(4px) rotate(45deg)}
+.menu-open .burger i:nth-child(2){transform:translateY(-4px) rotate(-45deg)}
+.menu{position:fixed;inset:0;z-index:490;background:#08080C;display:flex;flex-direction:column;justify-content:center;padding:100px var(--pad) 40px;clip-path:inset(0 0 100% 0);transition:clip-path .9s var(--ease);visibility:hidden}
+.menu-open .menu{clip-path:inset(0);visibility:visible}
+.menu a.big{display:block;overflow:hidden;font-size:clamp(44px,12vw,72px);font-weight:700;letter-spacing:-.04em;line-height:1.05;color:#fff}
+.menu a.big span{display:inline-block}
+.menu-foot{margin-top:48px;color:var(--muted);font-size:15px;display:grid;gap:6px}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px 0 36px;overflow:hidden;background:radial-gradient(60% 60% at 80% 20%,rgba(227,22,77,.35),transparent 60%),radial-gradient(40% 50% at 95% 80%,rgba(255,106,74,.18),transparent 60%),var(--bg)}
+#gl{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(7,7,11,.2) 0%,transparent 30%,transparent 60%,var(--bg) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;border-radius:999px;border:1px solid var(--line-2);background:rgba(7,7,11,.35);backdrop-filter:blur(10px);font-size:13px;color:#C9C9D4;margin-bottom:clamp(24px,4vw,40px)}
+.dot-live{width:8px;height:8px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:live 2s infinite}
+@keyframes live{70%{box-shadow:0 0 0 8px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+.hero-title{font-size:clamp(58px,min(13.4vw,15.5vh),214px);font-weight:700;line-height:.86;letter-spacing:-.065em;color:#fff;margin-left:-.04em}
+.hero-title .ln{display:block;overflow:hidden;padding:.02em 0 .06em}
+.hero-title .ch{display:inline-block;will-change:transform}
+.hero-title .outline .ch{color:transparent;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.55) 45%,rgba(255,255,255,.08) 100%);-webkit-background-clip:text;background-clip:text}
+.hero-title .red .ch{color:var(--brand)}
+.hero-title .ln.right{text-align:right}
+.hero-bottom{display:grid;grid-template-columns:1.2fr 1fr auto;gap:40px;align-items:end;margin-top:clamp(36px,5vw,64px);padding-top:28px;border-top:1px solid var(--line)}
+.hero-bottom p{font-size:clamp(16px,1.35vw,19px);color:#B4B4C2;max-width:520px;margin-bottom:24px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.cycler{font-size:14px;color:var(--muted)}
+.cycler .now{display:block;font:500 11px "JetBrains Mono",monospace;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.cycler .win{display:block;height:1.2em;overflow:hidden;font-size:clamp(22px,2.2vw,32px);font-weight:600;letter-spacing:-.03em;color:#fff;line-height:1.2}
+.cycler .win span{display:block}
+.scroll-cue{display:flex;align-items:center;gap:14px;font:500 11px "JetBrains Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);writing-mode:vertical-rl}
+.scroll-cue i{width:1px;height:70px;background:var(--line-2);position:relative;overflow:hidden}
+.scroll-cue i::after{content:"";position:absolute;left:0;top:-50%;width:100%;height:50%;background:var(--brand);animation:cue 2s var(--ease) infinite}
+@keyframes cue{to{top:100%}}
+
+/* Manifesto */
+.manifesto{padding:clamp(120px,16vw,240px) 0}
+.manifesto .label{margin-bottom:40px}
+.mf-text{font-size:clamp(30px,4.6vw,72px);line-height:1.08;letter-spacing:-.04em;font-weight:600;color:#fff;max-width:1200px}
+.mf-text em{font-style:normal;color:var(--brand)}
+.mf-text .w{display:inline}
+.mf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:clamp(64px,8vw,110px)}
+.mf-item{padding-top:24px;border-top:1px solid var(--line)}
+.mf-item .mono{font-size:12px;color:var(--brand);letter-spacing:.1em}
+.mf-item h3{font-size:22px;font-weight:600;letter-spacing:-.02em;margin:14px 0 8px;color:#fff}
+.mf-item p{color:var(--muted);font-size:15.5px}
+
+/* Bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:310px;gap:14px;grid-template-areas:"a a b c" "a a d d" "e f f g"}
+.card{position:relative;border-radius:24px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border:1px solid transparent;background:linear-gradient(var(--card),var(--card)) padding-box,radial-gradient(500px circle at var(--x,-500px) var(--y,-500px),rgba(227,22,77,.75),rgba(255,255,255,.07) 45%) border-box;transition:transform .8s var(--ease)}
+.card::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(420px circle at var(--x,-500px) var(--y,-500px),rgba(227,22,77,.09),transparent 50%)}
+.card>*{position:relative}
+.card .k{font:500 11px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between}
+.card h3{font-size:clamp(22px,2vw,28px);font-weight:600;letter-spacing:-.03em;color:#fff;margin:10px 0 6px}
+.card p{font-size:15px;color:var(--muted);max-width:420px}
+.ca{grid-area:a}.cb{grid-area:b}.cc{grid-area:c}.cd{grid-area:d}.ce{grid-area:e}.cf{grid-area:f}.cg{grid-area:g}
+.viz{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;margin:14px 0}
+
+/* rack */
+.rack{width:min(100%,420px);display:grid;gap:8px;padding:16px;border-radius:16px;background:linear-gradient(180deg,#14141D,#0B0B11);border:1px solid var(--line);box-shadow:0 40px 80px -30px rgba(227,22,77,.35)}
+.u{display:flex;align-items:center;gap:7px;height:30px;padding:0 12px;border-radius:8px;background:#0A0A0F;border:1px solid rgba(255,255,255,.05)}
+.u i{width:6px;height:6px;border-radius:50%;background:#22C55E;opacity:.25;animation:led 1.4s steps(2) infinite}
+.u i:nth-child(2){background:var(--brand);animation-duration:.9s}
+.u i:nth-child(3){background:#38BDF8;animation-duration:2.1s}
+.u:nth-child(2n) i{animation-delay:-.4s}.u:nth-child(3n) i{animation-delay:-.8s}
+@keyframes led{50%{opacity:1}}
+.u .slots{flex:1;height:10px;margin-left:10px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 3px,transparent 3px 7px);border-radius:2px}
+.u .bar{width:28%;height:4px;border-radius:2px;background:rgba(255,255,255,.06);overflow:hidden}
+.u .bar::after{content:"";display:block;height:100%;width:60%;background:linear-gradient(90deg,var(--brand),var(--coral));animation:bar 2.4s ease-in-out infinite alternate}
+.u:nth-child(odd) .bar::after{animation-duration:3.1s}
+.u:nth-child(3n) .bar::after{animation-duration:1.7s}
+@keyframes bar{from{width:15%}to{width:95%}}
+
+/* backup ring */
+.ring{position:relative;width:132px;height:132px}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:6}
+.ring .bgc{stroke:rgba(255,255,255,.07)}
+.ring .fg{stroke:url(#rg);stroke-linecap:round;stroke-dasharray:352;stroke-dashoffset:352;animation:ringfill 4s var(--ease) infinite}
+@keyframes ringfill{0%{stroke-dashoffset:352}60%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
+.ring .in{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.ring .in svg{width:28px;height:28px;transform:none;color:var(--brand);animation:spin 4s linear infinite;margin:0 auto 4px}
+.ring .in small{display:block;font:500 10px "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--muted)}
+@keyframes spin{to{transform:rotate(-360deg)}}
+
+/* wifi */
+.wifi{position:relative;width:150px;height:110px}
+.wifi svg{width:100%;height:100%}
+.wifi path{fill:none;stroke:var(--brand);stroke-width:7;stroke-linecap:round;opacity:.12;animation:arc 2.2s ease-in-out infinite}
+.wifi path:nth-of-type(2){animation-delay:.25s}.wifi path:nth-of-type(3){animation-delay:.5s}
+.wifi circle{fill:var(--brand)}
+@keyframes arc{0%,100%{opacity:.12}30%,60%{opacity:1}}
+
+/* cabling */
+.cables{width:100%;height:100%;max-height:150px}
+.cables .base{fill:none;stroke:rgba(255,255,255,.08);stroke-width:2}
+.cables .flow{fill:none;stroke:var(--brand);stroke-width:2;stroke-linecap:round;stroke-dasharray:14 140;animation:flow 2.6s linear infinite}
+.cables .flow:nth-of-type(2n){animation-duration:3.4s;stroke:var(--coral)}
+.cables .flow:nth-of-type(3n){animation-duration:2s}
+@keyframes flow{to{stroke-dashoffset:-308}}
+.cables rect{fill:#14141D;stroke:rgba(255,255,255,.14)}
+.cables .led{fill:#22C55E}
+
+/* wave */
+.wave{display:flex;align-items:center;gap:4px;height:90px}
+.wave i{width:4px;height:100%;border-radius:4px;background:linear-gradient(180deg,var(--coral),var(--brand));transform:scaleY(.15);animation:wv 1.2s ease-in-out infinite;animation-delay:calc(var(--i) * -90ms)}
+@keyframes wv{50%{transform:scaleY(var(--h,.8))}}
+
+/* terminal */
+.term{width:100%;height:100%;max-height:170px;border-radius:14px;background:#08080C;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+.term-top{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.term-top i{width:9px;height:9px;border-radius:50%;background:#2A2A35}
+.term-top i:first-child{background:var(--brand)}
+.term pre{flex:1;padding:12px 14px;font:400 12.5px/1.7 "JetBrains Mono",monospace;color:#B9B9C6;white-space:pre-wrap;overflow:hidden}
+.term .ok{color:#22C55E}.term .pr{color:var(--brand)}
+.term .caret{display:inline-block;width:7px;height:14px;background:var(--brand);vertical-align:-2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-content:center}
+.chips span{padding:8px 14px;border-radius:999px;border:1px solid var(--line-2);font-size:13.5px;color:#D5D5DE;background:rgba(255,255,255,.02);animation:bob 5s ease-in-out infinite}
+.chips span:nth-child(2){animation-delay:-1.2s}.chips span:nth-child(3){animation-delay:-2.4s}.chips span:nth-child(4){animation-delay:-3.6s}
+@keyframes bob{50%{transform:translateY(-5px)}}
+
+/* Process (horizontal) */
+.process{position:relative;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.process-pin{height:100vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:110px 0 60px}
+.process-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(36px,5vh,64px)}
+.pbar{width:220px;height:2px;background:var(--line-2);position:relative;overflow:hidden;border-radius:2px}
+.pbar i{position:absolute;inset:0;background:var(--brand);transform-origin:left;transform:scaleX(0)}
+.track{display:flex;gap:18px;padding-left:var(--pad);width:max-content;will-change:transform}
+.panel{position:relative;width:min(560px,78vw);min-height:min(440px,52vh);flex:none;border-radius:28px;padding:clamp(28px,3vw,44px);border:1px solid var(--line);background:linear-gradient(160deg,#121219,#0A0A0F);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.panel .num{font-size:clamp(110px,14vw,200px);font-weight:700;letter-spacing:-.07em;line-height:.8;color:transparent;background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,0) 85%);-webkit-background-clip:text;background-clip:text}
+.panel:hover .num{background-image:linear-gradient(180deg,var(--brand),rgba(227,22,77,0) 85%)}
+.panel h3{font-size:clamp(30px,3vw,44px);font-weight:600;letter-spacing:-.04em;color:#fff;margin-bottom:12px}
+.panel p{color:var(--muted);font-size:16px;max-width:400px}
+.panel ul{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin-top:22px}
+.panel li{font:500 11px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;padding:7px 11px;border-radius:999px;border:1px solid var(--line-2);color:#C3C3CF}
+.panel .glow{position:absolute;right:-120px;top:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(227,22,77,.28),transparent 65%);pointer-events:none}
+.panel.end{background:var(--brand);border-color:transparent;justify-content:center;gap:28px}
+.panel.end h3{font-size:clamp(34px,3.6vw,54px);line-height:1}
+.panel.end p{color:rgba(255,255,255,.85)}
+.panel.end .btn{background:#fff;color:var(--brand);align-self:flex-start}
+.panel.end .btn .arr{background:var(--brand);color:#fff}
+
+/* Why: velocity marquee */
+.why{overflow:hidden}
+.mq{display:flex;white-space:nowrap;will-change:transform}
+.mq span{font-size:clamp(60px,10vw,160px);font-weight:700;letter-spacing:-.05em;line-height:1.05;padding-right:.35em;color:#fff;display:inline-flex;align-items:center;gap:.35em}
+.mq span::after{content:"";width:.28em;height:.28em;background:var(--brand);border-radius:50%;flex:none}
+.mq.r2 span{color:rgba(255,255,255,.13)}
+.mq.r2 span::after{background:transparent;border:2px solid var(--brand)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(64px,8vw,110px);border-top:1px solid var(--line)}
+.wp{padding:32px 28px 8px 0;margin-right:28px;position:relative}
+.wp::before{content:"";position:absolute;top:-1px;left:0;height:1px;width:100%;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform 1s var(--ease)}
+.wp:hover::before{transform:scaleX(1)}
+.wp .mono{font-size:12px;color:var(--brand)}
+.wp h3{font-size:22px;font-weight:600;letter-spacing:-.02em;color:#fff;margin:16px 0 10px}
+.wp p{color:var(--muted);font-size:15.5px}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(40px,6vw,100px)}
+.faq-grid .h2{position:sticky;top:120px}
+.qa{border-bottom:1px solid var(--line)}
+.qa:first-child{border-top:1px solid var(--line)}
+.qa button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;text-align:left;padding:30px 0;font-size:clamp(18px,1.6vw,22px);font-weight:500;letter-spacing:-.02em;color:#fff;transition:color .3s}
+.qa button:hover{color:var(--brand-2)}
+.qa .pm{flex:none;position:relative;width:40px;height:40px;border-radius:50%;border:1px solid var(--line-2);transition:background .5s var(--ease),border-color .5s,transform .7s var(--ease)}
+.qa .pm::before,.qa .pm::after{content:"";position:absolute;top:50%;left:50%;width:13px;height:1.5px;margin:-.75px 0 0 -6.5px;background:currentColor;transition:transform .6s var(--ease)}
+.qa .pm::after{transform:rotate(90deg)}
+.qa.open .pm{background:var(--brand);border-color:var(--brand);transform:rotate(180deg)}
+.qa.open .pm::after{transform:rotate(0)}
+.qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .7s var(--ease)}
+.qa.open .ans{grid-template-rows:1fr}
+.qa .ans>div{overflow:hidden}
+.qa .ans p{color:var(--muted);font-size:16.5px;padding:0 64px 30px 0;max-width:680px}
+
+/* CTA */
+.cta{position:relative;overflow:hidden;text-align:center;padding:clamp(120px,16vw,220px) 0}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;pointer-events:none}
+.blob.b1{width:560px;height:560px;background:var(--brand);left:50%;top:50%;margin:-280px 0 0 -460px;animation:b1 14s ease-in-out infinite alternate}
+.blob.b2{width:440px;height:440px;background:var(--coral);left:50%;top:50%;margin:-220px 0 0 0;opacity:.3;animation:b2 11s ease-in-out infinite alternate}
+@keyframes b1{to{transform:translate(220px,-80px) scale(1.15)}}
+@keyframes b2{to{transform:translate(-200px,90px) scale(.85)}}
+.cta .wrap{position:relative;z-index:1}
+.cta-title{font-size:clamp(56px,12vw,190px);font-weight:700;line-height:.88;letter-spacing:-.065em;color:#fff}
+.cta-title em{font-style:normal;color:transparent;background:linear-gradient(90deg,#fff,#FFB3C4);-webkit-background-clip:text;background-clip:text;padding-right:.04em}
+.cta p{color:#C9C9D4;font-size:18px;max-width:520px;margin:30px auto 0}
+.roundbtn{position:relative;display:grid;place-items:center;width:170px;height:170px;margin:56px auto 0;border-radius:50%;background:#fff;color:var(--bg)}
+.roundbtn svg.txt{position:absolute;inset:-28px;width:calc(100% + 56px);height:calc(100% + 56px);animation:rot 16s linear infinite}
+.roundbtn svg.txt text{fill:#fff;font:500 11.5px "JetBrains Mono",monospace;letter-spacing:.3em}
+.roundbtn .ico{width:42px;height:42px;transition:transform .7s var(--ease)}
+.roundbtn:hover .ico{transform:rotate(-45deg) scale(1.1)}
+.roundbtn::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--brand);transform:scale(0);transition:transform .7s var(--ease);z-index:0}
+.roundbtn:hover::after{transform:scale(1)}
+.roundbtn:hover{color:#fff}
+.roundbtn .ico{position:relative;z-index:1}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(40px,6vw,96px)}
+.cinfo{display:grid;gap:0;margin-top:44px}
+.cinfo a,.cinfo div{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line);font-size:17px;color:#fff;transition:padding .6s var(--ease),color .3s}
+.cinfo a:hover{padding-left:12px;color:var(--brand-2)}
+.cinfo small{font:500 11px "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:5px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:clamp(24px,3.5vw,44px);border-radius:28px;border:1px solid var(--line);background:linear-gradient(160deg,#111118,#0A0A0F)}
+.f{position:relative}
+.f.full{grid-column:1/-1}
+.f input,.f select,.f textarea{width:100%;font:inherit;font-size:16px;color:#fff;background:transparent;border:0;border-bottom:1px solid var(--line-2);padding:26px 0 12px;outline:0;border-radius:0;appearance:none;transition:border-color .4s}
+.f textarea{min-height:120px;resize:vertical}
+.f select option{background:#111118;color:#fff}
+.f label{position:absolute;left:0;top:26px;font-size:16px;color:var(--muted);pointer-events:none;transition:all .45s var(--ease)}
+.f input:focus+label,.f input:not(:placeholder-shown)+label,.f textarea:focus+label,.f textarea:not(:placeholder-shown)+label,.f select+label{top:4px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-family:"JetBrains Mono",monospace;color:var(--brand-2)}
+.f .ln{position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease)}
+.f input:focus~.ln,.f textarea:focus~.ln,.f select:focus~.ln{transform:scaleX(1)}
+.f select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%238A8A9B' stroke-width='1.5'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 2px center}
+form .btn{grid-column:1/-1;margin-top:14px;justify-self:start;padding:0 8px 0 24px}
+.note{grid-column:1/-1;font-size:14px;color:var(--muted);min-height:20px}
+
+/* Footer */
+footer{position:relative;padding:90px 0 28px;border-top:1px solid var(--line);overflow:hidden}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.foot p{color:var(--muted);max-width:320px;margin-top:18px;font-size:15px}
+.foot h4{font:500 11px "JetBrains Mono",monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;font-weight:500}
+.foot ul{list-style:none;display:grid;gap:10px;font-size:15px}
+.foot ul a{position:relative;color:#D5D5DE;transition:color .3s}
+.foot ul a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease)}
+.foot ul a:hover{color:#fff}
+.foot ul a:hover::after{transform:scaleX(1);transform-origin:left}
+.wordmark{display:flex;justify-content:space-between;margin-top:80px;font-size:clamp(80px,21vw,330px);font-weight:700;letter-spacing:-.07em;line-height:.78;color:#fff;overflow:hidden;padding-bottom:.04em;user-select:none}
+.wordmark span{display:inline-block}
+.wordmark .amp{color:var(--brand)}
+.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+
+/* WhatsApp */
+.wa{position:fixed;right:20px;bottom:20px;z-index:400;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:rgba(14,14,21,.7);border:1px solid var(--line-2);backdrop-filter:blur(14px);color:#25D366;transition:transform .6s var(--ease),background .4s}
+.wa:hover{transform:scale(1.08);background:#25D366;color:#fff}
+.wa svg{width:24px;height:24px}
+
+/* Responsive */
+@media (max-width:1100px){
+  .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:300px;grid-template-areas:"a a" "a a" "b c" "d d" "e g" "f f"}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  .nav-pill,.nav .btn{display:none}
+  .burger{display:block}
+  .hero-bottom{grid-template-columns:1fr;gap:28px}
+  .scroll-cue{display:none}
+  .mf-grid{grid-template-columns:1fr;gap:0}
+  .mf-item{padding:24px 0}
+  .process-pin{height:auto;padding:clamp(100px,14vw,160px) 0}
+  .track{flex-direction:column;width:auto;padding:0 var(--pad)}
+  .panel{width:100%;min-height:340px}
+  .pbar{display:none}
+  .faq-grid,.contact-grid{grid-template-columns:1fr}
+  .faq-grid .h2{position:static}
+}
+@media (max-width:640px){
+  .bento{grid-template-columns:1fr;grid-auto-rows:auto;grid-template-areas:"a" "b" "c" "d" "e" "f" "g"}
+  .card{min-height:320px}
+  .ca{min-height:460px}
+  .why-grid{grid-template-columns:1fr}
+  .wp{margin-right:0}
+  form{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .cinfo a,.cinfo div{grid-template-columns:1fr;gap:4px}
+  .qa .ans p{padding-right:0}
+  .hero-title .ln.right{text-align:left}
+  .cur,.cur-dot{display:none}
+}
+/* Reduced motion: keep fades and micro-animations, drop scroll-jacking (pinned horizontal scroll) and grain */
+@media (prefers-reduced-motion:reduce){
+  .grain{display:none}
+}
+@media (prefers-reduced-motion:reduce) and (min-width:901px){
+  .process-pin{height:auto;padding:clamp(100px,14vw,160px) 0}
+  .track{flex-wrap:wrap;width:auto;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+  .panel{width:calc(50% - 9px)}
+  .pbar{display:none}
+}
+</style>
+</head>
+<body class="is-loading">
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cur" id="cur" aria-hidden="true"></div>
+<div class="cur-dot" id="curDot" aria-hidden="true"></div>
+
+<!-- Preloader -->
+<div class="pre" id="pre" aria-hidden="true">
+  <div class="pre-panel p2"></div>
+  <div class="pre-panel p1">
+    <div class="pre-inner">
+      <div class="pre-top"><span>IP &amp; Data Solutions</span><span>Jodhpur, IN</span></div>
+      <img class="pre-logo" src="logo-mark-white.png" alt="">
+      <div class="pre-bottom"><div class="pre-line"><i></i></div><div class="pre-num" id="preNum">000</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#top" class="logo" data-link aria-label="IP & Data Solutions home"><img src="logo-icon.png" alt="">IPDS</a>
+    <nav class="nav-pill" aria-label="Primary">
+      <a href="#about" data-link>About</a>
+      <a href="#services" data-link>Services</a>
+      <a href="#process" data-link>Process</a>
+      <a href="#why" data-link>Why us</a>
+      <a href="#faq" data-link>FAQ</a>
+    </nav>
+    <a href="#contact" class="btn btn-brand magnetic" data-link><span class="t"><span>Get a quote</span><span>Get a quote</span></span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+<div class="menu" id="menu">
+  <a class="big" href="#about" data-link><span>About</span></a>
+  <a class="big" href="#services" data-link><span>Services</span></a>
+  <a class="big" href="#process" data-link><span>Process</span></a>
+  <a class="big" href="#why" data-link><span>Why us</span></a>
+  <a class="big" href="#faq" data-link><span>FAQ</span></a>
+  <a class="big" href="#contact" data-link><span>Contact</span></a>
+  <div class="menu-foot"><a href="tel:+919549542771">+91 95495 42771</a><a href="mailto:info@ipds.co.in">info@ipds.co.in</a></div>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-tag hf"><span class="dot-live"></span>IT Infrastructure &middot; Security &middot; Data Protection</div>
+    <h1 class="hero-title" aria-label="Secure. Connected. Protected.">
+      <span class="ln" aria-hidden="true"><span class="sp">Secure.</span></span>
+      <span class="ln right outline" aria-hidden="true"><span class="sp">Connected.</span></span>
+      <span class="ln red" aria-hidden="true"><span class="sp">Protected.</span></span>
+    </h1>
+    <div class="hero-bottom">
+      <div class="hf">
+        <p>From innovation to information, we design, build and look after the infrastructure that keeps your business running, and protect what matters most: your IP and your data.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-brand magnetic" data-link><span class="t"><span>Talk to an expert</span><span>Talk to an expert</span></span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+          <a href="#services" class="btn btn-line magnetic" data-link><span class="t"><span>Explore services</span><span>Explore services</span></span></a>
+        </div>
+      </div>
+      <div class="cycler hf" aria-hidden="true">
+        <span class="now">( We deliver )</span>
+        <span class="win" id="cycler"><span>Server &amp; Storage</span></span>
+      </div>
+      <div class="scroll-cue hf" aria-hidden="true">Scroll<i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto" id="about">
+  <div class="wrap">
+    <div class="label" data-up><b>(01)</b> Who we are</div>
+    <p class="mf-text" id="mf">IP &amp; Data Solutions is an ICT company that builds and protects the technology businesses depend on. From the <em>server room</em> to the <em>last cable</em>, we deliver infrastructure that is fast, reliable and <em>secure by design</em>, for companies in every industry.</p>
+    <div class="mf-grid">
+      <div class="mf-item" data-up><span class="mono">— End to end</span><h3>One accountable team</h3><p>Consulting, supply, deployment and support, all under one roof.</p></div>
+      <div class="mf-item" data-up><span class="mono">— Security first</span><h3>Protection built in</h3><p>Firewalls, backups and recovery plans designed in from day one.</p></div>
+      <div class="mf-item" data-up><span class="mono">— Any industry</span><h3>Sized to your business</h3><p>Solutions shaped around how your teams actually work.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES (bento) -->
+<section class="sec" id="services" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="label" data-up style="margin-bottom:22px"><b>(02)</b> Services</div>
+        <h2 class="h2" data-split>Everything your<br>infrastructure <em>needs.</em></h2>
+      </div>
+      <p data-up>Six core practices, delivered by one team, from first rack to round-the-clock support.</p>
+    </div>
+
+    <div class="bento" id="bento">
+      <article class="card ca" data-card>
+        <div class="k"><span>01 — Compute</span><span>Core</span></div>
+        <div class="viz">
+          <div class="rack" aria-hidden="true">
+            <div class="u"><i></i><i></i><i></i><span class="slots"></span><span class="bar"></span></div>
+            <div class="u"><i></i><i></i><i></i><span class="slots"></span><span class="bar"></span></div>
+            <div class="u"><i></i><i></i><i></i><span class="slots"></span><span class="bar"></span></div>
+            <div class="u"><i></i><i></i><i></i><span class="slots"></span><span class="bar"></span></div>
+            <div class="u"><i></i><i></i><i></i><span class="slots"></span><span class="bar"></span></div>
+            <div class="u"><i></i><i></i><i></i><span class="slots"></span><span class="bar"></span></div>
+            <div class="u"><i></i><i></i><i></i><span class="slots"></span><span class="bar"></span></div>
+          </div>
+        </div>
+        <div><h3>Server &amp; Storage</h3><p>Reliable compute and storage platforms, scaled to your workloads and ready to grow with you.</p></div>
+      </article>
+
+      <article class="card cb" data-card>
+        <div class="k"><span>02 — Recovery</span></div>
+        <div class="viz">
+          <div class="ring" aria-hidden="true">
+            <svg viewBox="0 0 132 132"><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF6A4A"/><stop offset="1" stop-color="#E3164D"/></linearGradient></defs><circle class="bgc" cx="66" cy="66" r="56"/><circle class="fg" cx="66" cy="66" r="56"/></svg>
+            <div class="in"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 01-15.5 6.2M3 12a9 9 0 0115.5-6.2"/><path d="M18 2v4h-4M6 22v-4h4"/></svg><small>SYNC</small></div></div>
+          </div>
+        </div>
+        <div><h3>Backup Solutions</h3><p>Automated backups and disaster recovery.</p></div>
+      </article>
+
+      <article class="card cc" data-card>
+        <div class="k"><span>03 — Wireless</span></div>
+        <div class="viz">
+          <div class="wifi" aria-hidden="true"><svg viewBox="0 0 150 110"><path d="M10 45a90 90 0 01130 0"/><path d="M33 68a58 58 0 0184 0"/><path d="M55 90a27 27 0 0140 0"/><circle cx="75" cy="102" r="6"/></svg></div>
+        </div>
+        <div><h3>Wireless Solutions</h3><p>Secure, seamless Wi-Fi coverage.</p></div>
+      </article>
+
+      <article class="card cd" data-card>
+        <div class="k"><span>04 — Cabling</span><span>Copper · Fibre</span></div>
+        <div class="viz">
+          <svg class="cables" viewBox="0 0 600 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <path class="base" d="M70 30 C250 30 350 75 530 75"/><path class="base" d="M70 75 C250 75 350 30 530 30"/><path class="base" d="M70 120 C250 120 350 120 530 120"/><path class="base" d="M70 30 C250 30 350 120 530 120"/><path class="base" d="M70 120 C250 120 350 75 530 75"/>
+            <path class="flow" d="M70 30 C250 30 350 75 530 75"/><path class="flow" d="M70 75 C250 75 350 30 530 30"/><path class="flow" d="M70 120 C250 120 350 120 530 120"/><path class="flow" d="M70 30 C250 30 350 120 530 120"/><path class="flow" d="M70 120 C250 120 350 75 530 75"/>
+            <rect x="20" y="18" width="50" height="24" rx="6"/><rect x="20" y="63" width="50" height="24" rx="6"/><rect x="20" y="108" width="50" height="24" rx="6"/>
+            <rect x="530" y="18" width="50" height="24" rx="6"/><rect x="530" y="63" width="50" height="24" rx="6"/><rect x="530" y="108" width="50" height="24" rx="6"/>
+            <circle class="led" cx="32" cy="30" r="3"/><circle class="led" cx="32" cy="75" r="3"/><circle class="led" cx="32" cy="120" r="3"/><circle class="led" cx="568" cy="30" r="3"/><circle class="led" cx="568" cy="75" r="3"/><circle class="led" cx="568" cy="120" r="3"/>
+          </svg>
+        </div>
+        <div><h3>Structured Cabling</h3><p>Clean, standards-based cabling that forms a dependable foundation for your entire network.</p></div>
+      </article>
+
+      <article class="card ce" data-card>
+        <div class="k"><span>05 — Voice</span></div>
+        <div class="viz"><div class="wave" id="wave" aria-hidden="true"></div></div>
+        <div><h3>IP Telephony</h3><p>Modern voice that keeps every team connected.</p></div>
+      </article>
+
+      <article class="card cf" data-card>
+        <div class="k"><span>06 — Expertise</span><span>Consult · Deploy · Support</span></div>
+        <div class="viz">
+          <div class="term" aria-hidden="true"><div class="term-top"><i></i><i></i><i></i></div><pre id="term"></pre></div>
+        </div>
+        <div><h3>Professional Services</h3><p>Consulting, deployment and ongoing support from engineers who know your environment.</p></div>
+      </article>
+
+      <article class="card cg" data-card>
+        <div class="k"><span>+ Also</span></div>
+        <div class="viz chips"><span>Managed IT</span><span>Cloud Computing</span><span>Firewall &amp; Security</span><span>Virtualization / VDI</span></div>
+        <div><h3>And more</h3><p>Ask us about your stack.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS (horizontal) -->
+<section class="process" id="process">
+  <div class="process-pin" id="processPin">
+    <div class="wrap" style="width:100%">
+      <div class="process-head">
+        <div>
+          <div class="label" data-up style="margin-bottom:22px"><b>(03)</b> Process</div>
+          <h2 class="h2" data-split>From first call to<br><em>fully supported.</em></h2>
+        </div>
+        <div class="pbar" aria-hidden="true"><i id="pbar"></i></div>
+      </div>
+    </div>
+    <div class="track" id="track">
+      <div class="panel"><span class="glow"></span><span class="num">01</span><div><h3>Assess</h3><p>We understand your goals, audit your current setup and map the risks and gaps.</p><ul><li>Site survey</li><li>Network audit</li><li>Risk review</li></ul></div></div>
+      <div class="panel"><span class="glow"></span><span class="num">02</span><div><h3>Design</h3><p>We architect a solution that fits your budget, scale and security requirements.</p><ul><li>Architecture</li><li>Sizing</li><li>Proposal</li></ul></div></div>
+      <div class="panel"><span class="glow"></span><span class="num">03</span><div><h3>Deploy</h3><p>Our engineers install, configure and test everything with minimal disruption.</p><ul><li>Installation</li><li>Configuration</li><li>Testing</li></ul></div></div>
+      <div class="panel"><span class="glow"></span><span class="num">04</span><div><h3>Support</h3><p>Ongoing monitoring, maintenance and help whenever you need it.</p><ul><li>Monitoring</li><li>Maintenance</li><li>Helpdesk</li></ul></div></div>
+      <div class="panel end"><h3>Ready when<br>you are.</h3><p>Tell us where your infrastructure is today. We'll show you where it could be.</p><a href="#contact" class="btn magnetic" data-link><span class="t"><span>Start a project</span><span>Start a project</span></span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec why" id="why">
+  <div class="wrap" style="margin-bottom:clamp(48px,6vw,80px)">
+    <div class="label" data-up><b>(04)</b> Why IPDS</div>
+  </div>
+  <div class="mq r1" id="mq1" aria-hidden="true"><span>Security-first</span><span>End-to-end</span><span>Any industry</span><span>Local support</span></div>
+  <div class="mq r2" id="mq2" aria-hidden="true"><span>Reliable</span><span>Scalable</span><span>Protected</span><span>Connected</span></div>
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="wp" data-up><span class="mono">01</span><h3>Security at every layer</h3><p>From the firewall to the backup vault, protection is designed in, not bolted on.</p></div>
+      <div class="wp" data-up><span class="mono">02</span><h3>One partner, end to end</h3><p>Consulting, supply, installation and support from a single accountable team.</p></div>
+      <div class="wp" data-up><span class="mono">03</span><h3>Built for any industry</h3><p>Every solution is tailored to how your business actually works.</p></div>
+      <div class="wp" data-up><span class="mono">04</span><h3>Local, responsive support</h3><p>Based in Jodhpur, close by when you need us, with clear communication throughout.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div>
+      <div class="label" data-up style="margin-bottom:22px"><b>(05)</b> FAQ</div>
+      <h2 class="h2" data-split>Questions,<br><em>answered.</em></h2>
+    </div>
+    <div data-up>
+      <div class="qa open"><button aria-expanded="true">What industries do you work with?<span class="pm"></span></button><div class="ans"><div><p>We serve businesses across all industries. Every solution is tailored to the size, workflow and requirements of your organisation.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Can you take over our existing IT setup?<span class="pm"></span></button><div class="ans"><div><p>Yes. We start by assessing your current infrastructure, then improve, extend or manage it, without forcing you to start from scratch.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">How do your backup and recovery solutions work?<span class="pm"></span></button><div class="ans"><div><p>We set up automated, scheduled backups of your critical systems and data, along with a tested recovery plan so you can restore operations quickly after an incident.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Do you provide support after installation?<span class="pm"></span></button><div class="ans"><div><p>Absolutely. Our professional services include ongoing maintenance, monitoring and support so your systems stay healthy long after go-live.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">How do I get a quote?<span class="pm"></span></button><div class="ans"><div><p>Fill in the form below, call us, or message us on WhatsApp. We'll discuss your requirements and send a tailored proposal.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <span class="blob b1"></span><span class="blob b2"></span>
+  <div class="wrap">
+    <h2 class="cta-title" data-split>Let's build<br>something <em>secure.</em></h2>
+    <p data-up>Tell us about your network, your data and where your business is headed.</p>
+    <a href="#contact" class="roundbtn magnetic" data-link aria-label="Get in touch">
+      <svg class="txt" viewBox="0 0 226 226" aria-hidden="true"><defs><path id="circ" d="M113 113 m-97 0 a97 97 0 1 1 194 0 a97 97 0 1 1 -194 0"/></defs><text><textPath href="#circ">GET IN TOUCH • GET IN TOUCH • GET IN TOUCH • </textPath></text></svg>
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact" style="padding-top:clamp(60px,8vw,120px)">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="label" data-up style="margin-bottom:22px"><b>(06)</b> Contact</div>
+      <h2 class="h2" data-split>Get in <em>touch.</em></h2>
+      <div class="cinfo">
+        <a href="tel:+919549542771" data-up><small>Phone</small><span>+91 95495 42771<br>+91 99298 42771</span></a>
+        <a href="mailto:info@ipds.co.in" data-up><small>Email</small><span>info@ipds.co.in</span></a>
+        <a href="https://wa.me/919929842771" target="_blank" rel="noopener" data-up><small>WhatsApp</small><span>+91 99298 42771</span></a>
+        <a href="https://maps.google.com/?q=Ayushman+Ashapurna+Valley+Jhalamand+Jodhpur" target="_blank" rel="noopener" data-up><small>Office</small><span>371, Ayushman Ashapurna Valley, Near New High Court, Jhalamand, Jodhpur</span></a>
+      </div>
+    </div>
+    <form id="form" novalidate data-up>
+      <div class="f"><input id="f1" name="name" placeholder=" " autocomplete="name"><label for="f1">Your name</label><span class="ln"></span></div>
+      <div class="f"><input id="f2" name="phone" type="tel" placeholder=" " autocomplete="tel"><label for="f2">Phone</label><span class="ln"></span></div>
+      <div class="f full"><input id="f3" name="email" type="email" placeholder=" " autocomplete="email"><label for="f3">Email (optional)</label><span class="ln"></span></div>
+      <div class="f full"><select id="f4" name="service"><option>Server &amp; Storage</option><option>Backup Solutions</option><option>Structured Cabling</option><option>Wireless Solutions</option><option>IP Telephony</option><option>Professional Services</option><option>Something else</option></select><label for="f4">Interested in</label><span class="ln"></span></div>
+      <div class="f full"><textarea id="f5" name="message" placeholder=" "></textarea><label for="f5">Tell us about your project</label><span class="ln"></span></div>
+      <button type="submit" class="btn btn-brand magnetic"><span class="t"><span>Send message</span><span>Send message</span></span><span class="arr"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></button>
+      <p class="note" id="note" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><a href="#top" class="logo" data-link><img src="logo-icon.png" alt="">IP &amp; Data Solutions</a><p>From innovation to information, we protect what matters most: your IP and your data.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="#about" data-link>About</a></li><li><a href="#services" data-link>Services</a></li><li><a href="#process" data-link>Process</a></li><li><a href="#faq" data-link>FAQ</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="#services" data-link>Server &amp; Storage</a></li><li><a href="#services" data-link>Backup</a></li><li><a href="#services" data-link>Cabling</a></li><li><a href="#services" data-link>Wireless</a></li><li><a href="#services" data-link>IP Telephony</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+919549542771">+91 95495 42771</a></li><li><a href="tel:+919929842771">+91 99298 42771</a></li><li><a href="mailto:info@ipds.co.in">info@ipds.co.in</a></li></ul></div>
+    </div>
+    <div class="wordmark" id="wordmark" aria-hidden="true"><span>I</span><span>P</span><span class="amp">&amp;</span><span>D</span><span>S</span></div>
+    <div class="foot-bottom"><span>&copy; <span id="yr"></span> IP &amp; Data Solutions. All rights reserved.</span><span>Jhalamand, Jodhpur, Rajasthan</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/919929842771" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7.1a8 8 0 01-2.4-1.5 9 9 0 01-1.6-2c-.2-.3 0-.5.1-.6l.5-.5.3-.5a.5.5 0 000-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 00-.8.4 3.4 3.4 0 00-1 2.5 5.9 5.9 0 001.2 3.1 13.4 13.4 0 005.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 002-1.4 2.5 2.5 0 00.2-1.4c-.1-.1-.3-.2-.6-.3zM12 21.8a9.8 9.8 0 01-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 1118.1-5.2A9.8 9.8 0 0112 21.8zm8.4-18.2A11.8 11.8 0 001.7 17.9L0 24l6.3-1.6a11.8 11.8 0 005.7 1.4A11.8 11.8 0 0020.4 3.6z"/></svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(() => {
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const hasGsap = !!(window.gsap && window.ScrollTrigger);
+  $('#yr').textContent = new Date().getFullYear();
+
+  /* ---------- Text splitting ---------- */
+  function splitChars(el) {
+    const txt = el.textContent;
+    el.innerHTML = [...txt].map((c, i) => `<span class="ch" style="--i:${i}">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+    return $$('.ch', el);
+  }
+  // Wraps every word in a mask (.wm > .wi), preserving <em>/<br> children
+  function splitMaskWords(el) {
+    const walk = node => [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+          const m = document.createElement('span'); m.className = 'wm';
+          const i = document.createElement('span'); i.className = 'wi'; i.textContent = part;
+          m.appendChild(i); frag.appendChild(m);
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1 && n.tagName !== 'BR') walk(n);
+    });
+    walk(el);
+    return $$('.wi', el);
+  }
+  function splitWords(el) {
+    const walk = node => [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(' ')); return; }
+          const s = document.createElement('span'); s.className = 'w'; s.textContent = part; frag.appendChild(s);
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1) walk(n);
+    });
+    walk(el);
+    return $$('.w', el);
+  }
+
+  /* ---------- Generated visuals ---------- */
+  const wave = $('#wave');
+  for (let i = 0; i < 32; i++) {
+    const b = document.createElement('i');
+    b.style.setProperty('--i', i);
+    b.style.setProperty('--h', (0.3 + Math.abs(Math.sin(i * 0.55)) * 0.7).toFixed(2));
+    wave.appendChild(b);
+  }
+
+  /* Terminal typing loop (starts when visible) */
+  const term = $('#term');
+  const script = [
+    ['pr', '$ ', 'ipds assess --site=hq'],
+    ['ok', '✓ ', 'network topology mapped'],
+    ['ok', '✓ ', 'firewall policy hardened'],
+    ['ok', '✓ ', 'backup schedule verified'],
+    ['pr', '→ ', 'ready to deploy'],
+  ];
+  let termRunning = false;
+  async function typeTerm() {
+    if (termRunning) return; termRunning = true;
+    const wait = ms => new Promise(r => setTimeout(r, ms));
+    while (true) {
+      term.innerHTML = '';
+      for (const [cls, pre, line] of script) {
+        const row = document.createElement('div');
+        row.innerHTML = `<span class="${cls}">${pre}</span><span class="tx"></span><span class="caret"></span>`;
+        term.appendChild(row);
+        const tx = $('.tx', row);
+        for (const ch of line) { tx.textContent += ch; await wait(28 + Math.random() * 40); }
+        $('.caret', row).remove();
+        await wait(380);
+      }
+      const end = document.createElement('div'); end.innerHTML = '<span class="caret"></span>'; term.appendChild(end);
+      await wait(3200);
+    }
+  }
+  new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { typeTerm(); o.disconnect(); } }), { threshold: .3 }).observe(term);
+
+  /* ---------- Hero WebGL gradient ---------- */
+  const shader = (() => {
+    const cv = $('#gl');
+    const gl = cv.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' });
+    if (!gl) { cv.remove(); return null; }
+    const vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+    const fs = `precision mediump float;
+uniform vec2 r;uniform float t;uniform vec2 m;
+float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float n(vec2 p){vec2 i=floor(p),f=fract(p);vec2 u=f*f*(3.-2.*f);
+ return mix(mix(h(i),h(i+vec2(1,0)),u.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),u.x),u.y);}
+float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p*=2.03;a*=.5;}return v;}
+void main(){
+ vec2 uv=gl_FragCoord.xy/r;vec2 p=uv;p.x*=r.x/r.y;float s=t*.05;
+ vec2 q=vec2(fbm(p*1.5+s),fbm(p*1.5+vec2(5.2,1.3)-s));
+ vec2 w=vec2(fbm(p*1.3+2.2*q+vec2(1.7,9.2)+s*1.4),fbm(p*1.3+2.2*q+vec2(8.3,2.8)-s));
+ float f=fbm(p*1.1+2.6*w+(m-.5)*.35);
+ vec3 bg=vec3(.027,.027,.043),wine=vec3(.30,.03,.12),red=vec3(.89,.086,.30),coral=vec3(1.,.42,.29);
+ float k=f*length(w);
+ vec3 c=mix(bg,wine,smoothstep(.25,.75,f));
+ c=mix(c,red,smoothstep(.45,.95,k*1.35));
+ c=mix(c,coral,smoothstep(.9,1.25,k*1.55)*.55);
+ float mask=smoothstep(.05,1.05,uv.x*.85+uv.y*.55);
+ c=mix(bg,c,mask);
+ c+=red*.10*(1.-smoothstep(0.,.45,distance(uv,m)));
+ c*=1.-.28*length(uv-vec2(.6,.55));
+ gl_FragColor=vec4(c,1.);}`;
+    const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; };
+    const pr = gl.createProgram();
+    gl.attachShader(pr, sh(gl.VERTEX_SHADER, vs)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, fs)); gl.linkProgram(pr);
+    if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) { cv.remove(); return null; }
+    gl.useProgram(pr);
+    gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(pr, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    const uR = gl.getUniformLocation(pr, 'r'), uT = gl.getUniformLocation(pr, 't'), uM = gl.getUniformLocation(pr, 'm');
+    const SCALE = .5; // render at half-res; the gradient is soft so this is invisible and much cheaper
+    const size = () => { cv.width = Math.max(2, cv.clientWidth * SCALE); cv.height = Math.max(2, cv.clientHeight * SCALE); gl.viewport(0, 0, cv.width, cv.height); };
+    size(); addEventListener('resize', size);
+    const mouse = { x: .7, y: .6 }, target = { x: .7, y: .6 };
+    $('#hero').addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); target.x = (e.clientX - r.left) / r.width; target.y = 1 - (e.clientY - r.top) / r.height; });
+    let visible = true, start = performance.now();
+    const frame = now => {
+      mouse.x += (target.x - mouse.x) * .04; mouse.y += (target.y - mouse.y) * .04;
+      gl.uniform2f(uR, cv.width, cv.height); gl.uniform1f(uT, (now - start) / 1000 + 20); gl.uniform2f(uM, mouse.x, mouse.y);
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      if (visible) requestAnimationFrame(frame);
+    };
+    new IntersectionObserver(([e]) => { const was = visible; visible = e.isIntersecting; if (visible && !was) requestAnimationFrame(frame); }).observe(cv);
+    requestAnimationFrame(frame);
+    return cv;
+  })();
+
+  /* ---------- FAQ ---------- */
+  $$('.qa').forEach(q => $('button', q).addEventListener('click', () => {
+    const open = !q.classList.contains('open');
+    $$('.qa').forEach(o => { o.classList.remove('open'); $('button', o).setAttribute('aria-expanded', 'false'); });
+    if (open) { q.classList.add('open'); $('button', q).setAttribute('aria-expanded', 'true'); }
+    setTimeout(() => window.ScrollTrigger && ScrollTrigger.refresh(), 750);
+  }));
+
+  /* ---------- Form → opens mail client with the enquiry ---------- */
+  $('#form').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target, note = $('#note');
+    if (!f.name.value.trim() || !f.phone.value.trim()) { note.style.color = 'var(--brand-2)'; note.textContent = 'Please add your name and phone number.'; return; }
+    const body = `Name: ${f.name.value}\nPhone: ${f.phone.value}\nEmail: ${f.email.value}\nService: ${f.service.value}\n\n${f.message.value}`;
+    location.href = `mailto:info@ipds.co.in?subject=${encodeURIComponent('Enquiry: ' + f.service.value)}&body=${encodeURIComponent(body)}`;
+    note.style.color = ''; note.textContent = 'Opening your email app… or reach us instantly on WhatsApp.';
+  });
+
+  /* ---------- Bento border glow follows the pointer ---------- */
+  const bento = $('#bento');
+  if (fine) bento.addEventListener('pointermove', e => {
+    $$('[data-card]', bento).forEach(c => {
+      const r = c.getBoundingClientRect();
+      c.style.setProperty('--x', e.clientX - r.left + 'px');
+      c.style.setProperty('--y', e.clientY - r.top + 'px');
+    });
+  });
+
+  /* ---------- Menu ---------- */
+  const burger = $('#burger');
+  let lenis = null;
+  const setMenu = open => {
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open);
+    if (open && window.gsap) gsap.fromTo('.menu a.big span, .menu-foot', { yPercent: 105, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 1, ease: 'expo.out', stagger: .06, delay: .25, overwrite: true });
+    if (lenis) open ? lenis.stop() : lenis.start();
+    else document.body.style.overflow = open ? 'hidden' : '';
+  };
+  burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+
+  /* ---------- No-GSAP fallback: page stays fully static & usable ---------- */
+  if (!hasGsap) {
+    document.documentElement.classList.add('static');
+    document.body.classList.remove('is-loading');
+    $$('[data-link]').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* Smooth scroll */
+  if (!reduce && window.Lenis) {
+    lenis = new Lenis({ lerp: .09, wheelMultiplier: 1 });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+    lenis.stop();
+  }
+  $$('[data-link]').forEach(a => a.addEventListener('click', e => {
+    const id = a.getAttribute('href'); const t = id === '#top' ? 0 : $(id);
+    if (t === null) return;
+    e.preventDefault(); setMenu(false);
+    lenis ? lenis.scrollTo(t, { duration: 1.6, easing: x => 1 - Math.pow(1 - x, 4) }) : (t === 0 ? scrollTo(0, 0) : t.scrollIntoView());
+  }));
+
+  /* Hero split */
+  const heroChars = $$('.hero-title .sp').flatMap(splitChars);
+
+  /* ---------- Intro: preloader → hero ---------- */
+  const intro = gsap.timeline({ defaults: { ease: 'expo.out' } });
+  gsap.set(heroChars, { yPercent: 115, rotate: 8 });
+  gsap.set('.hf', { y: 30, opacity: 0 });
+  gsap.set('.nav', { y: -40, opacity: 0 });
+  if (shader) gsap.set(shader, { opacity: 0, scale: 1.15 });
+
+  {
+    const n = { v: 0 }, num = $('#preNum');
+    intro
+      .from('.pre-logo', { scale: .6, opacity: 0, rotate: -20, duration: 1 }, 0)
+      .from('.pre-top span', { y: 20, opacity: 0, stagger: .1, duration: .8 }, .1)
+      .to(n, { v: 100, duration: 1.8, ease: 'power3.inOut', onUpdate: () => num.textContent = String(Math.round(n.v)).padStart(3, '0') }, .1)
+      .to('.pre-line i', { scaleX: 1, duration: 1.8, ease: 'power3.inOut' }, .1)
+      .to(['.pre-inner'], { opacity: 0, y: -30, duration: .6, ease: 'power2.in' }, '+=.1')
+      .to('.pre-panel.p1', { yPercent: -100, duration: 1.1, ease: 'expo.inOut' }, '-=.2')
+      .to('.pre-panel.p2', { yPercent: -100, duration: 1.1, ease: 'expo.inOut' }, '-=.95')
+      .add(() => { $('#pre').remove(); document.body.classList.remove('is-loading'); lenis && lenis.start(); }, '-=.2')
+      .addLabel('hero', '-=.75');
+    if (shader) intro.to(shader, { opacity: 1, scale: 1, duration: 2.4, ease: 'power2.out' }, 'hero');
+    intro
+      .to(heroChars, { yPercent: 0, rotate: 0, duration: 1.4, stagger: .028 }, 'hero')
+      .to('.nav', { y: 0, opacity: 1, duration: 1.2 }, 'hero+=.4')
+      .to('.hf', { y: 0, opacity: 1, duration: 1.2, stagger: .1 }, 'hero+=.5');
+  }
+
+  /* Hero scroll-out parallax */
+  gsap.to('.hero-title', { yPercent: -18, opacity: .15, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
+  if (shader) gsap.to('#gl', { yPercent: 25, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
+
+  /* Word cycler */
+  const words = ['Server & Storage', 'Backup & Recovery', 'Structured Cabling', 'Wireless Solutions', 'IP Telephony', 'Professional Services'];
+  const win = $('#cycler'); let wi = 0;
+  setInterval(() => {
+    const cur = $('span', win); wi = (wi + 1) % words.length;
+    const nx = document.createElement('span'); nx.textContent = words[wi]; win.appendChild(nx);
+    gsap.timeline({ onComplete: () => cur.remove() })
+      .to(cur, { yPercent: -100, duration: .8, ease: 'expo.inOut' })
+      .fromTo(nx, { yPercent: 0 }, { yPercent: -100, duration: .8, ease: 'expo.inOut' }, 0)
+      .set(nx, { yPercent: 0 });
+  }, 2400);
+
+  /* ---------- Generic reveals ---------- */
+  gsap.set('[data-up]', { y: 50, opacity: 0 });
+  ScrollTrigger.batch('[data-up]', { start: 'top 88%', once: true,
+    onEnter: b => gsap.to(b, { y: 0, opacity: 1, duration: 1.2, ease: 'expo.out', stagger: .09, overwrite: true }) });
+
+  $$('[data-split]').forEach(el => {
+    const w = splitMaskWords(el);
+    gsap.set(w, { yPercent: 110 });
+    ScrollTrigger.create({ trigger: el, start: 'top 85%', once: true,
+      onEnter: () => gsap.to(w, { yPercent: 0, duration: 1.3, ease: 'expo.out', stagger: .045 }) });
+  });
+
+  /* Manifesto: words light up as you scroll */
+  const mw = splitWords($('#mf'));
+  gsap.fromTo(mw, { opacity: .13 }, { opacity: 1, ease: 'none', stagger: .1,
+    scrollTrigger: { trigger: '#mf', start: 'top 80%', end: 'bottom 50%', scrub: .6 } });
+
+  /* Bento cards */
+  gsap.set('[data-card]', { y: 80, opacity: 0, scale: .96 });
+  ScrollTrigger.batch('[data-card]', { start: 'top 90%', once: true,
+    onEnter: b => gsap.to(b, { y: 0, opacity: 1, scale: 1, duration: 1.3, ease: 'expo.out', stagger: .1, overwrite: true }) });
+
+  /* Process: pinned horizontal scroll on desktop */
+  const mm = gsap.matchMedia();
+  mm.add('(min-width: 901px) and (prefers-reduced-motion: no-preference)', () => {
+    const track = $('#track');
+    const dist = () => Math.max(0, track.scrollWidth - innerWidth + parseFloat(getComputedStyle(track).paddingLeft));
+    const tw = gsap.to(track, { x: () => -dist(), ease: 'none',
+      scrollTrigger: { trigger: '#processPin', pin: true, scrub: 1, start: 'top top', end: () => '+=' + dist(), invalidateOnRefresh: true, anticipatePin: 1 } });
+    gsap.to('#pbar', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '#processPin', start: 'top top', end: () => '+=' + dist(), scrub: true } });
+    $$('.panel .num').forEach(nm => gsap.fromTo(nm, { xPercent: 30 }, { xPercent: -10, ease: 'none',
+      scrollTrigger: { trigger: nm.parentElement, containerAnimation: tw, start: 'left right', end: 'right left', scrub: true } }));
+  });
+  mm.add('(max-width: 900px), (prefers-reduced-motion: reduce)', () => {
+    gsap.set('.panel', { y: 60, opacity: 0 });
+    ScrollTrigger.batch('.panel', { start: 'top 90%', once: true, onEnter: b => gsap.to(b, { y: 0, opacity: 1, duration: 1.1, ease: 'expo.out', stagger: .1 }) });
+  });
+
+  /* Velocity-reactive marquees */
+  const rows = [{ el: $('#mq1'), dir: -1 }, { el: $('#mq2'), dir: 1 }];
+  rows.forEach(r => { r.el.innerHTML += r.el.innerHTML; r.x = r.dir === 1 ? -r.el.scrollWidth / 2 : 0; });
+  let vel = 0, skew = 0;
+  if (!reduce) ScrollTrigger.create({ trigger: '#why', start: 'top bottom', end: 'bottom top', onUpdate: s => vel = s.getVelocity() });
+  gsap.ticker.add((_, dt) => {
+    vel *= .92;
+    const boost = 1 + Math.min(Math.abs(vel) / 220, 6);
+    skew += (gsap.utils.clamp(-8, 8, vel / -180) - skew) * .1;
+    rows.forEach(r => {
+      const half = r.el.scrollWidth / 2;
+      r.x += r.dir * .06 * dt * boost;
+      if (r.x <= -half) r.x += half;
+      if (r.x > 0) r.x -= half;
+      r.el.style.transform = `translate3d(${r.x}px,0,0) skewX(${skew}deg)`;
+    });
+  });
+
+  /* CTA title parallax */
+  gsap.fromTo('.cta-title', { scale: .9 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.cta', start: 'top bottom', end: 'center center', scrub: true } });
+
+  /* Footer wordmark rises letter by letter */
+  gsap.from('#wordmark span', { yPercent: 100, ease: 'expo.out', duration: 1.4, stagger: .07,
+    scrollTrigger: { trigger: '#wordmark', start: 'top 95%' } });
+
+  /* Nav: hide on scroll down, show on up; active link */
+  const nav = $('#nav');
+  ScrollTrigger.create({ start: 0, end: 'max', onUpdate: s => nav.classList.toggle('hide', s.direction === 1 && s.scroll() > 300 && !document.body.classList.contains('menu-open')) });
+  $$('.nav-pill a').forEach(a => {
+    const sec = $(a.getAttribute('href'));
+    ScrollTrigger.create({ trigger: sec, start: 'top 50%', end: 'bottom 50%', onToggle: s => s.isActive && $$('.nav-pill a').forEach(x => x.classList.toggle('active', x === a)) });
+  });
+
+  /* ---------- Pointer: cursor + magnetic ---------- */
+  if (fine) {
+    const cur = $('#cur'), dot = $('#curDot');
+    const cx = gsap.quickTo(cur, 'x', { duration: .55, ease: 'power3' }), cy = gsap.quickTo(cur, 'y', { duration: .55, ease: 'power3' });
+    const dx = gsap.quickTo(dot, 'x', { duration: .12 }), dy = gsap.quickTo(dot, 'y', { duration: .12 });
+    addEventListener('pointermove', e => { cx(e.clientX); cy(e.clientY); dx(e.clientX); dy(e.clientY); cur.style.opacity = dot.style.opacity = 1; });
+    document.addEventListener('pointerleave', () => cur.style.opacity = dot.style.opacity = 0);
+    $$('a, button, [data-card], .qa').forEach(el => {
+      el.addEventListener('pointerenter', () => cur.classList.add('hover'));
+      el.addEventListener('pointerleave', () => cur.classList.remove('hover'));
+    });
+    $$('.magnetic').forEach(el => {
+      const xTo = gsap.quickTo(el, 'x', { duration: .6, ease: 'power3' }), yTo = gsap.quickTo(el, 'y', { duration: .6, ease: 'power3' });
+      const k = el.classList.contains('roundbtn') ? .4 : .25;
+      el.addEventListener('pointermove', e => { const r = el.getBoundingClientRect(); xTo((e.clientX - r.left - r.width / 2) * k); yTo((e.clientY - r.top - r.height / 2) * k); });
+      el.addEventListener('pointerleave', () => { gsap.to(el, { x: 0, y: 0, duration: 1, ease: 'elastic.out(1,.35)' }); });
+    });
+  }
+
+  addEventListener('load', () => ScrollTrigger.refresh());
+  document.fonts && document.fonts.ready.then(() => ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "ipds-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IP & Data Solutions landing page",
+  "scripts": {
+    "dev": "npx --yes live-server --port=3000 --open=index.html"
+  }
+}
